@@ -1,0 +1,41 @@
+<div class="page-container">
+  <div class="card topo">
+    <div class="header">
+      <h2>Filmes</h2>
+    </div>
+
+    <div class="filtros">
+      <input type="text" placeholder="Pesquisar por título..." class="input-form" [(ngModel)]="filtroTitulo">
+      <input type="number" placeholder="Ano..." class="input-form" [(ngModel)]="filtroAno">
+      <input type="text" placeholder="Status..." class="input-form" [(ngModel)]="filtroStatus">
+      <input type="text" placeholder="Produtora..." class="input-form" [(ngModel)]="filtroProdutora">  
+      <button class="btn-primary" (click)="filtrar()">Buscar</button>
+    </div>
+  </div>
+
+  <div class="card lista">
+    <div class="linha-cabecalho">
+      <span>ID</span>
+      <span>Título</span>
+      <span>Ano</span>
+      <span>Nota</span>
+      <span>Produtora</span>
+      <span>Status</span>
+      <span style="text-align: right; padding-right: 20px;">Ações</span>
+    </div>
+
+    <div class="linha-item" *ngFor="let f of filmes">
+      <span class="texto-bold">{{ f.id }}</span>
+      <span class="texto-bold">{{ f.titulo || f.title }}</span>
+      <span>{{ f.ano }}</span>
+      <span>{{ f.nota != null ? f.nota : 'N/A' }}</span>
+      <span>{{ f.produtorasNomes != null ? f.produtorasNomes.join(', ') : 'N/A' }}</span>
+      <span>{{ f.status }}</span>
+      <div class="acoes">
+        <button (click)="editar(f.id)">Editar</button>
+        <button (click)="detalhes(f.id)">Detalhes</button>
+        <button (click)="excluir(f.id)">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>

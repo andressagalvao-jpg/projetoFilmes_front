@@ -1,0 +1,21 @@
+<div class="acoes">
+  <button
+    *ngIf="rotaBase === 'filmes'"
+    class="btn btn-acao"
+    [routerLink]="['/' + rotaBase + '/editar', idItem]">
+    Editar
+  </button>
+
+  <button
+    *ngIf="rotaBase === 'filmes'"
+    class="btn btn-acao"
+    [routerLink]="['/' + rotaBase, idItem]">
+    Detalhes
+  </button>
+
+  <button
+    class="btn btn-acao"
+    (click)="dispararExclusao()">
+    Excluir
+  </button>
+</div>

@@ -1,0 +1,16 @@
+<div class="page-container" *ngIf="filme">
+  <div class="card">
+    <div class="header">
+      <h2>Detalhes do Filme</h2>
+    </div>
+    <div class="modal-body">
+      <p><strong>Título:</strong> {{ filme.titulo }}</p>
+      <p><strong>Ano:</strong> {{ filme.ano }}</p>
+      <p><strong>Gênero:</strong> {{ filme.genero }}</p>
+      <p><strong>Avaliação:</strong> {{ filme.avaliacao }}</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" (click)="voltar()">Voltar</button>
+    </div>
+  </div>
+</div>

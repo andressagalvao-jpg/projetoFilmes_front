@@ -1,0 +1,97 @@
+.page-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-form {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.linha-cabecalho, .linha-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.8fr 0.8fr 2fr 1fr 1.5fr;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.linha-cabecalho {
+  font-weight: bold;
+  background-color: #fafafa;
+}
+
+.linha-item:hover {
+  background-color: #f9f9f9;
+}
+
+.texto-bold {
+  font-weight: bold;
+  color: #333;
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 10px 20px;
+}
+.btn-primary:hover {
+  background-color: #385682;
+}
+
+.acoes button {
+  background-color: #5c75ab !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 8px 16px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.acoes button:hover {
+  background-color: #4a5e8c !important;
+}
+

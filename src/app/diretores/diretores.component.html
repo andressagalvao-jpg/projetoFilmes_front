@@ -1,0 +1,39 @@
+<div class="page-container">
+  <div class="card topo">
+    <div class="header">
+      <h2>Produtoras</h2>
+    </div>
+
+    <div class="filtros">
+      <input
+        type="text"
+        placeholder="Pesquisar..."
+        class="input-form"
+        [(ngModel)]="filtroNome">
+
+      <button class="btn-primary" (click)="filtrar()">
+        Buscar
+      </button>
+    </div>
+  </div>
+
+  <div class="card lista">
+    <div class="linha-cabecalho">
+      <span>Nome</span>
+      <span style="text-align: right; padding-right: 20px;">
+        Ações
+      </span>
+    </div>
+
+    <div class="linha-item" *ngFor="let p of produtoras">
+      <span class="texto-bold">{{ p.nome }}</span>
+
+      <div class="acoes">
+        <app-botoes-tabela
+          rotaBase="produtoras"
+          [idItem]="p.id">
+        </app-botoes-tabela>
+      </div>
+    </div>
+  </div>
+</div>

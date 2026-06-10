@@ -1,0 +1,35 @@
+<div class="page-container">
+  <div class="card topo">
+    <div class="header">
+      <h2>Pesquisar Produtora</h2>
+    </div>
+
+    <div class="filtros">
+      <input type="text" placeholder="Pesquisar por produtora..." class="input-form" [(ngModel)]="filtroNome">
+      <button class="btn-primary" (click)="filtrarProdutoras()">Buscar</button>
+      <button class="btn-primary">Adicionar +</button>
+    </div>
+  </div>
+
+  <div class="card lista">
+    <div class="linha-cabecalho">
+      <span>ID</span>
+      <span>Produtora</span>
+      <span>Filmes Associados</span>
+      <span style="text-align: right; padding-right: 20px;">Ações</span>
+    </div>
+
+    <div class="linha-item" *ngFor="let produtora of produtoras">
+  <span class="texto-bold">{{ produtora.id }}</span>
+  <span class="texto-bold">{{ produtora.name }}</span> <span class="texto-bold">{{ contarFilmes(produtora.id) }}</span>
+  
+  <div class="acoes">
+    <app-botoes-tabela rotaBase="produtoras" [idItem]="produtora.id"></app-botoes-tabela>
+  </div>
+</div>
+
+    <div *ngIf="produtoras.length === 0" style="padding: 20px; text-align: center;">
+      Nenhuma produtora encontrada.
+    </div>
+  </div>
+</div>

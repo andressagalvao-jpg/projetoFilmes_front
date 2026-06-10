@@ -1,0 +1,21 @@
+<div class="page-container" *ngIf="filme">
+  <div class="card">
+    <div class="header">
+      <h2>Editar Filme</h2>
+    </div>
+    <div class="modal-body">
+      <div class="linha-form">
+        <input type="text" placeholder="Título" class="input-form titulo" [(ngModel)]="filme.titulo">
+        <input type="number" placeholder="Ano" class="input-form" [(ngModel)]="filme.ano">
+      </div>
+      <div class="linha-form">
+        <input type="text" placeholder="Gênero" class="input-form" [(ngModel)]="filme.genero">
+        <input type="number" placeholder="Avaliação" class="input-form" [(ngModel)]="filme.avaliacao">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" (click)="voltar()">Cancelar</button>
+      <button class="btn btn-primary btn-salvar" (click)="salvar()">Salvar</button>
+    </div>
+  </div>
+</div>
