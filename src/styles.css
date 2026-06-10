@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+button, .btn-primary, .btn-acao {
+  background-color: #5c75ab;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
